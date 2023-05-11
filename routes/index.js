@@ -37,8 +37,10 @@ router.get('/teams/:id/delete', Controller.deleteTeam)
 
 // Detail team
 router.get('/teams/:id/detail', Controller.detailTeam)
-router.get('/teams/games', Controller.games)
-// router.get('/teams/:id/tournament', Controller.Tournament)
+router.get('/teams/player/add', Controller.addPlayer)
+router.post('/teams/player/add', Controller.createPlayer)
+router.get('/teams/tournament', Controller.Tournament)
+router.get('/teams/:tournamentId/games', Controller.games)
 // router.get('/teams/:tournamentId/:teamId', Controller.joinTournamentGet)
 // router.post('/teams/:tournamentId/:teamId', Controller.joinTournamentPost)
 

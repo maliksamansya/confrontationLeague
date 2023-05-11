@@ -23,7 +23,7 @@
       </nav>
         <div class="container">
             <div class="p-5 ">
-                <h2 class="mb-5 text-center">LIST CHAMPIONSIP</h2>
+                <h2 class="mb-5 text-center">CHAMPIONSIP</h2>
                 
         <table class="table">
             <thead>
@@ -35,15 +35,15 @@
                 <th scope="col">ACTION</th>
             </thead>
             <tbody>
-                <% data.forEach(el => { %>
+                <% game.forEach(el => { %>
                     <tr>
-                        <td><%= el.name %></td>
+                        <td><%= el.Tournament.category %></td>
                         <td><%= el.location %></td>
-                        <td><%= formatCurrency(el.price) %></td>
+                        <td><%= convertNumber(el.price) %></td>
                         <td><%= el.formatDate %></td>
                         <%  
                           const event = {
-                          title: el.name,
+                          title: el.Tournament.category,
                           location: el.location,
                           start: el.date,
                           duration: [3, "hour"],

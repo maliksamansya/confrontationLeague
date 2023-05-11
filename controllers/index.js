@@ -1,8 +1,10 @@
 // File mas Danar
 const { Coach, Game, Team, Tournament, Player, Teamtournament } = require('../models/index')
 const { Op } = require("sequelize");
+const { google } = require("calendar-link");
 // const { formatCurrency } = require('../helpers/index')
 const bcrypt = require('bcryptjs');
+const convertNumber = require('../helpers/convertNumber');
 
 
 class Controller {
@@ -187,6 +189,15 @@ class Controller {
             })
     }
 
+    static addPlayer(req, res) {
+        // let id = +req.params.id
+        res.render('add-player')
+    }
+
+    static createPlayer(req, res) {
+
+    }
+
     static Tournament(req, res) {
         // include: {
         //     model: Team
@@ -207,11 +218,19 @@ class Controller {
     }
 
     static games(req, res) {
-        Game.findAll()
-            .then(games => {
-                // res.send(tournaments)
-                res.send(games)
-                // res.render('game', { games })
+        let tournamentId = req.params.tournamentId
+        Game.findAll({
+            include: {
+                model: Tournament
+            },
+            where: {
+                TournamentId: tournamentId
+            }
+        })
+            .then(game => {
+                // res.send(games)
+                // game = game[0]
+                res.render('game', { game, convertNumber, google })
             })
             .catch(err => {
                 console.log(err);
