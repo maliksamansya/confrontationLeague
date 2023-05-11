@@ -1,0 +1,32 @@
+[
+    {
+        "category": "UEFA CHAMPIONS LEAGUE",
+        "imageUrl": "https://canadasoccer.com/wp-content/uploads/2022/09/UEFA_UCL_www.jpg",
+        "code": "01-123"
+    },
+    {
+        "category": "UEFA EUROPA LEAGUE",
+        "imageUrl":"https://m.media-amazon.com/images/M/MV5BZDAzNTM0YjItNDk1Yy00ZmJlLTljM2EtMDIxYTNmYTgxOThmXkEyXkFqcGdeQXVyNzEzNjU1NDg@._V1_.jpg",
+        "code": "02-212"
+    },
+    {
+        "category": "CARABAO CUP",
+        "imageUrl":"https://upload.wikimedia.org/wikipedia/id/thumb/0/0c/EFL_%28Carabao%29_Cup_Logo.svg/1200px-EFL_%28Carabao%29_Cup_Logo.svg.png",
+        "code": "03-546"
+    },
+    {
+        "category": "LA LIGA",
+        "imageUrl":"https://selisik.com/wp-content/uploads/2023/03/Bola-Spain-La-Liga.jpg",
+        "code": "02-876"
+    },
+    {
+        "category": "PREMIER LEAGUE",
+        "imageUrl":"https://static.vecteezy.com/system/resources/previews/010/994/267/non_2x/premier-league-symbol-logo-with-name-purple-design-england-football-european-countries-football-teams-illustration-with-pink-background-free-vector.jpg",
+        "code": "01-658"
+    },
+    {
+        "category": "BUNDES LIGA",
+        "imageUrl":"https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_logo_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png",
+        "code": "01-658"
+    }
+]

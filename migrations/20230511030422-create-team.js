@@ -20,6 +20,7 @@ module.exports = {
       },
       CoachId: {
         type: Sequelize.INTEGER,
+        unique: true,
         references: {
           model: 'Coaches',
           key: 'id'

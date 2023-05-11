@@ -19,8 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Tournament.init({
-    name: DataTypes.STRING,
-    type: DataTypes.STRING
+    category: DataTypes.STRING,
+    imageUrl: DataTypes.STRING,
+    code: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Tournament',

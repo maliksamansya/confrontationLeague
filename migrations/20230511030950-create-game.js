@@ -15,6 +15,9 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
+      price: {
+        type: Sequelize.INTEGER
+      },
       TournamentId: {
         type: Sequelize.INTEGER,
         references: {

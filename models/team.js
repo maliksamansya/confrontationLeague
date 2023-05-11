@@ -2,6 +2,8 @@
 const {
   Model
 } = require('sequelize');
+const { Op } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Team extends Model {
     /**
@@ -16,6 +18,23 @@ module.exports = (sequelize, DataTypes) => {
       Team.hasMany(models.Player, { foreignKey: 'TeamId' })
       Team.hasMany(models.Teamtournament, { foreignKey: 'TeamId' })
       Team.belongsToMany(models.Tournament, { through: models.Teamtournament })
+    }
+
+    static filter(filter, data) {
+      let option = {
+        include: {
+          model: data
+        }
+      }
+      if (filter) {
+        option.where = {
+          name: {
+            [Op.iLike]: `%${filter}%`,
+          }
+        }
+      }
+      return Team.findAll(option)
+
     }
   }
   Team.init({

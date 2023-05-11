@@ -14,12 +14,21 @@ module.exports = (sequelize, DataTypes) => {
       // Team.hasMany(models.Player, { foreignKey: 'TeamId' })
       Player.belongsTo(models.Team, { foreignKey: 'TeamId' })
     }
+
+    get captain() {
+      if (this.position === 'DMF') {
+        return this.name = `${this.name} (CAPTAIN)`
+      } else {
+        return this.name
+      }
+    }
   }
   Player.init({
     name: DataTypes.STRING,
     nationality: DataTypes.STRING,
     birthYear: DataTypes.INTEGER,
-    position: DataTypes.STRING
+    position: DataTypes.STRING,
+    TeamId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Player',

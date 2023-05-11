@@ -1,14 +1,32 @@
 [
     {
-        "fullName": "Malik",
+        "fullName": "Pep",
         "email": "malik123@gmail.com",
-        "password": "password"
+        "password": "malik123@gmail.com"
        
     },
     {
-        "fullName": "Danar",
+        "fullName": "Tuchel",
         "email": "danar123@gmail.com",
-        "password": "danar12345"
+        "password": "danar123@gmail.com"
+        
+    },
+    {
+        "fullName": "Nagel",
+        "email": "danaru123@gmail.com",
+        "password": "danaru123@gmail.com"
+        
+    },
+    {
+        "fullName": "Poch",
+        "email": "danari123@gmail.com",
+        "password": "danari123@gmail.com"
+        
+    },
+    {
+        "fullName": "Roy",
+        "email": "danare123@gmail.com",
+        "password": "danare123@gmail.com"
         
     }
 ]  

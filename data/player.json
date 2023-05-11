@@ -1,0 +1,320 @@
+[
+    {
+        "name": "Player 1",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "GK",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 2",
+        "nationality": "Spain",
+        "birthYear": "2002",
+        "position": "CB",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 3",
+        "nationality": "Germany",
+        "birthYear": "2003",
+        "position": "CB",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 4",
+        "nationality": "Argentina",
+        "birthYear": "2004",
+        "position": "LB",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 5",
+        "nationality": "Japan",
+        "birthYear": "2005",
+        "position": "RB",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 6",
+        "nationality": "Argentina",
+        "birthYear": "2006",
+        "position": "DMF",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 7",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 8",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 9",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "LW",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 10",
+        "nationality": "Spain",
+        "birthYear": "2000",
+        "position": "RW",
+        "TeamId":1 
+    },
+    {
+        "name": "Player 11",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "ST",
+        "TeamId":1 
+    },
+
+
+
+    {
+        "name": "Player 1",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "GK",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 2",
+        "nationality": "Spain",
+        "birthYear": "2002",
+        "position": "CB",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 3",
+        "nationality": "Germany",
+        "birthYear": "2003",
+        "position": "CB",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 4",
+        "nationality": "Argentina",
+        "birthYear": "2004",
+        "position": "LB",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 5",
+        "nationality": "Japan",
+        "birthYear": "2005",
+        "position": "RB",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 6",
+        "nationality": "Argentina",
+        "birthYear": "2006",
+        "position": "DMF",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 7",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 8",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 9",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "LW",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 10",
+        "nationality": "Spain",
+        "birthYear": "2000",
+        "position": "RW",
+        "TeamId":2 
+    },
+    {
+        "name": "Player 11",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "ST",
+        "TeamId":2 
+    },
+
+
+
+    {
+        "name": "Player 1",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "GK",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 2",
+        "nationality": "Spain",
+        "birthYear": "2002",
+        "position": "CB",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 3",
+        "nationality": "Germany",
+        "birthYear": "2003",
+        "position": "CB",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 4",
+        "nationality": "Argentina",
+        "birthYear": "2004",
+        "position": "LB",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 5",
+        "nationality": "Japan",
+        "birthYear": "2005",
+        "position": "RB",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 6",
+        "nationality": "Argentina",
+        "birthYear": "2006",
+        "position": "DMF",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 7",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 8",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 9",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "LW",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 10",
+        "nationality": "Spain",
+        "birthYear": "2000",
+        "position": "RW",
+        "TeamId":3 
+    },
+    {
+        "name": "Player 11",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "ST",
+        "TeamId":3 
+    },
+
+
+
+    {
+        "name": "Player 1",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "GK",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 2",
+        "nationality": "Spain",
+        "birthYear": "2002",
+        "position": "CB",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 3",
+        "nationality": "Germany",
+        "birthYear": "2003",
+        "position": "CB",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 4",
+        "nationality": "Argentina",
+        "birthYear": "2004",
+        "position": "LB",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 5",
+        "nationality": "Japan",
+        "birthYear": "2005",
+        "position": "RB",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 6",
+        "nationality": "Argentina",
+        "birthYear": "2006",
+        "position": "DMF",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 7",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 8",
+        "nationality": "England",
+        "birthYear": "2000",
+        "position": "CMF",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 9",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "LW",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 10",
+        "nationality": "Spain",
+        "birthYear": "2000",
+        "position": "RW",
+        "TeamId":4 
+    },
+    {
+        "name": "Player 11",
+        "nationality": "Argentina",
+        "birthYear": "2000",
+        "position": "ST",
+        "TeamId":4 
+    }
+
+]

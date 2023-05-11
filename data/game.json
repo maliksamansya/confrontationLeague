@@ -1,0 +1,43 @@
+[
+    {
+        "location": "German",
+        "price": 10000000,
+        "date": "9/12/2024",
+        "TournamentId": 1
+    },
+    {
+        "location": "Spain",
+        "price": 11000000,
+        "date": "10/07/2024",
+        "TournamentId": 2
+
+    },
+    {
+        "location": "France",
+        "price": 11000000,
+        "date": "10/07/2025",
+        "TournamentId": 3
+
+    },
+    {
+        "location": "Italia",
+        "price": 11000000,
+        "date": "10/12/2025",
+        "TournamentId": 4
+
+    },
+    {
+        "location": "Spain",
+        "price": 11000000,
+        "date": "10/07/2026",
+        "TournamentId": 5
+
+    },
+    {
+        "location": "Belanda",
+        "price": 11000000,
+        "date": "10/12/2026",
+        "TournamentId": 6
+
+    }
+]
