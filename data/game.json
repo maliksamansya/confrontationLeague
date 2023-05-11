@@ -1,0 +1,14 @@
+[
+{
+    "name": "BAYERN MUNCHEN VS REAL MADRID",
+    "location": "German",
+    "price": 10000000,
+    "date": "9/12/2024"
+},
+{
+    "name": "BARCELONA VS MANCHESTER UNITED",
+    "location": "Spain",
+    "price": 11000000,
+    "date": "10/07/2024"
+}
+]

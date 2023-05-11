@@ -1,11 +1,12 @@
-const express = require('express')
-const Controller = require('../controllers')
-const router = express.Router()
+const Controller = require('../controllers');
+const router = require('express').Router()
+const league = require('./routerLeague')
+const teams = require('./routerTeams')
 
 
-router.get('/', Controller.landing)
+router.get('/',Controller.landing)
 
-router.get('/register', Controller.addAccount)
+router.get('/register',Controller.registerFrom)
 
 router.post('/register', Controller.createAccount)
 
@@ -13,33 +14,16 @@ router.get('/login', Controller.loginForm)
 
 router.post('/login', Controller.postLogin)
 
-// router.use((req, res, next) => {
-//     if(!req.session.email){
-//         res.redirect('/login')
-//     }else{
-//         next()
-//     }
-//   })
-// router.get('/home', Controller.home)
+router.use((req, res, next) => {
+    if(!req.session.email){
+        res.redirect('/login')
+    }else{
+        next()
+    }
+})
 
-// router.get('/teams', Controller.teams)
+// router.use('/league', league)
+router.use('/teams', teams)
 
-// router.get('/teams/add', Controller.addTeam)
-
-// router.post('/teams/add', Controller.createTeam)
-
-// router.get('/teams/:id/delete', Controller.deleteTeam)
-
-// router.get('/teams/:id/edit', Controller.editTeam)
-
-// router.post('/teams/:id/edit', Controller.updatedTeam)
-
-// router.get('/sports', Controller.sports)
-
-// router.get('/sports/add', Controller.addSport)
-
-// router.post('/sports/add', Controller.createSport)
-
-// router.get('/championship', Controller.championship)
 
 module.exports = router
