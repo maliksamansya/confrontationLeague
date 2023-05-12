@@ -38,9 +38,45 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Team.init({
-    name: DataTypes.STRING,
-    foundedYear: DataTypes.STRING,
-    countryOfOrigin: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'name is required'
+        },
+        notNull: {
+          msg: 'name is required'
+        }
+      }
+
+    },
+    foundedYear: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'foundedYear is required'
+        },
+        notNull: {
+          msg: 'foundedYear is required'
+        }
+      }
+
+    },
+    countryOfOrigin: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'countryOfOrigin is required'
+        },
+        notNull: {
+          msg: 'countryOfOrigin is required'
+        }
+      }
+
+    },
     CoachId: DataTypes.INTEGER
   }, {
     sequelize,

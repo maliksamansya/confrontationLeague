@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Team <%=team.name%></title>
+    <title>Detail Team</title>
     <style>
         #table {
             font-family: Arial, Helvetica, sans-serif;
@@ -31,22 +31,16 @@
     </style>
 </head>
 <body>
-    <h1>Detail Team  <%=team.name%></h1>
-    <a href="/teams/<%= team.id %>/player/add"><button>Add Player</button></a>
+    <h1>Team And Tournament</h1>
     <table id="table">
         <tr>
-          <th>Player Name</th>
-          <th>Nationality</th>
-          <th>Birth Year</th>
-          <th>Position</th>
+          <th>Team</th>
+          <th>Founded Year</th>
         </tr>
-        <% team.Players.forEach(el => { %>
+        <% Teamtournament.Teams.forEach(el => { %>
             <tr>
-                <td><%= el.captain %></td>
-                <td><%= el.nationality %></td>
-                <td><%= el.birthYear %></td>
-                <td><%= el.position %></td>
-                
+                <td><%= el.name %></td>
+                <td><%= el.foundedYear %></td>
             </tr>
         <% }) %>
        

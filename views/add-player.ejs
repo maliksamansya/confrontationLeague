@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <center><h1>Add New Team </h1></center>
-     <form action='/teams/add' method="post">
+     <form action='/teams/<%= team.id %>/player/add' method="post">
         <div class="row">
           <div class="form-group col-md-12">
             <label for="inputArtName">Name</label>
@@ -21,33 +21,25 @@
         </div>
         <div class="form-group">
           <label for="inputAddress">Nationality</label>
-          <input type="number" class="form-control" name="nationality" >
+          <input type="text" class="form-control" name="nationality" >
         </div>
         <div class="form-group">
           <label for="inputAddress2">Birth Year</label>
-          <br>
-          <select name="birthYear" id="">
-                <option value="" selected-disabled>Choose Country</option>
-                <% ['Germany','Spain', 'England','France'].forEach(el => { %>
-                        <option value="<%= el %>"><%= el %></option>
-                <% }) %>
-            </select>
+          <input type="number" name="birthYear">
         </div>
         <div>
-            <label for="inputAddress3">Coach</label>
+            <label for="inputAddress3">Position</label>
             <br>
-            <select name="CoachId" id="">
-                <!-- <option value="" selected-disabled>Choose Coach</option> -->
-                <% coaches.forEach((el,i,arr) => { %>
-                  <% if (i === arr.length-1) { %>
-                    <option value="<%= el.id %>"><%= el.fullName %></option>
-                  <% } %>
+            <select name="position" id="">
+                <option value="" selected-disabled>Choose Position</option>
+                <% ['CB', 'LB', 'RB', 'DMF', 'CMF', 'LW', 'RW', 'ST'].forEach(el => { %>
+                    <option value="<%= el %>"><%= el %></option>
                 <% }) %>
             </select>
             <!-- <input type="text" class="form-control" name="countryOfOrigin"> -->
         </div>
           <br>
-        <button type="submit" class="btn btn-primary">Add Team</button>
+        <button type="submit" class="btn btn-primary">Add Player</button>
       </form>
     </div>
 </body>

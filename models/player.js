@@ -24,10 +24,54 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Player.init({
-    name: DataTypes.STRING,
-    nationality: DataTypes.STRING,
-    birthYear: DataTypes.INTEGER,
-    position: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'name is required'
+        },
+        notNull: {
+          msg: 'name is required'
+        }
+      }
+    },
+    nationality: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'nationality is required'
+        },
+        notNull: {
+          msg: 'nationality is required'
+        }
+      }
+    },
+    birthYear: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'birthYear is required'
+        },
+        notNull: {
+          msg: 'birthYear is required'
+        }
+      }
+    },
+    position: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'position is required'
+        },
+        notNull: {
+          msg: 'position is required'
+        }
+      }
+    },
     TeamId: DataTypes.INTEGER
   }, {
     sequelize,

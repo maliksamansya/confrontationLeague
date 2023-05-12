@@ -102,6 +102,11 @@ class Controller {
             .catch(err => {
                 if (err.name === 'SequelizeUniqueConstraintError') {
                     res.send('Pelatih yang kamu pilih sudah melatih tim lain, pelatih tidak boleh diganti')
+                } else if (err.name == 'SequelizeValidationError') {
+                    err.errors.forEach(el => {
+                        errors.push(el.message)
+                    })
+                    res.send(errors)
                 } else {
                     console.log(err);
                     res.send(err)
@@ -130,6 +135,7 @@ class Controller {
 
     static updateTeam(req, res) {
         // console.log(req.body);
+        let errors = []
         let id = req.params.id
         let { name, foundedYear, countryOfOrigin, CoachId } = req.body
 
@@ -144,6 +150,11 @@ class Controller {
             .catch(err => {
                 if (err.name === 'SequelizeUniqueConstraintError') {
                     res.send('Pelatih yang kamu pilih sudah melatih tim lain, pelatih tidak boleh diganti')
+                } else if (err.name == 'SequelizeValidationError') {
+                    err.errors.forEach(el => {
+                        errors.push(el.message)
+                    })
+                    res.send(errors)
                 } else {
                     console.log(err);
                     res.send(err)
@@ -190,13 +201,60 @@ class Controller {
     }
 
     static addPlayer(req, res) {
-        // let id = +req.params.id
-        res.render('add-player')
+        let id = +req.params.id
+        Team.findAll({
+            where: {
+                id: id
+            }
+        })
+            .then(team => {
+                team = team[0]
+                res.render('add-player', { team })
+            })
+            .catch(err => {
+                console.log(err);
+                res.send(err)
+            })
     }
 
     static createPlayer(req, res) {
+        let errors = []
+        let id = +req.params.id
+        let { name, nationality, birthYear, position } = req.body
+        Player.create({ name, nationality, birthYear, position, TeamId: id })
+            .then(newPlayer => {
+                res.redirect(`/teams/${id}/detail`)
+            })
+            .catch(err => {
+                if (err.name == 'SequelizeValidationError') {
+                    err.errors.forEach(el => {
+                        errors.push(el.message)
+                    })
+                    res.send(errors)
+                } else {
+                    console.log(err);
+                    res.send(err)
+                }
+
+            })
 
     }
+
+    // static deletePlayer(req, res) {
+    //     let id = +req.params.id
+    //     Player.destroy({
+    //         where: {
+    //             id: id
+    //         }
+    //     })
+    //         .then(_ => {
+    //             res.redirect(`/teams`)
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             res.send(err)
+    //         })
+    // }
 
     static Tournament(req, res) {
         // include: {
@@ -210,6 +268,31 @@ class Controller {
             .then(tournaments => {
                 // res.send(tournaments)
                 res.render('list-tournament', { tournaments, id })
+            })
+            .catch(err => {
+                console.log(err);
+                res.send(err)
+            })
+    }
+
+    static teamTournament(req, res) {
+        // res.send('hoola')
+        let tournamentId = req.params.tournamentId
+
+        Tournament.findAll({
+            include: {
+                model: Team,
+
+            },
+            where: {
+                id: tournamentId
+            }
+
+        })
+            .then(Teamtournament => {
+                Teamtournament = Teamtournament[0]
+                // res.send(Teamtournaments)
+                res.render('list-teamTournament', { Teamtournament })
             })
             .catch(err => {
                 console.log(err);
